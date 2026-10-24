@@ -1,0 +1,721 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rendertheme xmlns="http://mapsforge.org/renderTheme"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://mapsforge.org/renderTheme https://raw.githubusercontent.com/mapsforge/mapsforge/master/resources/renderTheme.xsd"
+             version="4" map-background="#FFFFFF">
+    <stylemenu id="r4menu" defaultvalue="parcelsno" defaultlang="fi">
+
+        <layer id="parcelsyes" visible="true">
+            <name lang="en" value="Parcels"/>
+            <name lang="fi" value="Kiinteistorajat"/>
+            <cat id="parcels"/>
+        </layer>
+
+        <layer id="parcelsno" visible="true">
+            <name lang="en" value="No parcels"/>
+            <name lang="fi" value="Ei kiinteistorajoja"/>
+        </layer>
+    </stylemenu>
+	<rule e="way" k="kohdeluokka" v="32411">
+        <area fill="#f26161" stroke="#000000" stroke-width="0.2"/>
+    </rule>
+    <rule e="way" k="kohdeluokka" v="32412">
+        <area fill="#ff7f66" stroke="#000000" stroke-width="0.2"/>
+    </rule>
+    <rule e="way" k="kohdeluokka" v="32413|32415|32416">
+        <area fill="#ffff8c" stroke="#000000" stroke-width="0.2"/>
+    </rule>
+    <rule e="way" k="kohdeluokka" v="32414|32417|32418">
+        <area fill="#ffe680" stroke="#000000" stroke-width="0.2"/>
+    </rule>
+    <rule e="way" k="kohdeluokka" v="42210|42211|42212" zoom-min="13">
+        <area fill="#333333" stroke="#000000" stroke-width="0.2"/>
+    </rule>
+    <rule e="way" k="kohdeluokka" v="42220|42221|42222" zoom-min="13">
+        <area fill="#ff33ff" stroke="#000000" stroke-width="0.2"/>
+    </rule>
+    <rule e="way" k="kohdeluokka" v="42260|42261|42262" zoom-min="14">
+        <area fill="#cccccc" stroke="#000000" stroke-width="0.2"/>
+    </rule>
+
+    <rule e="any" k="tyyppi" v="asuinrakennus|asuinrakennus_p" zoom-min="14">
+        <circle radius="1" scale-radius="true" fill="#333333"/>
+    </rule>
+    <rule e="any" k="tyyppi" v="liikettaijulkinenrakennus|liikettaijulkinenrakennus_p" zoom-min="14">
+        <circle radius="1" scale-radius="true" fill="#ff33ff"/>
+    </rule>
+    <rule e="any" k="tyyppi" v="lomarakennus|lomarakennus_p" zoom-min="14">
+        <circle radius="1" scale-radius="true" fill="#ff0000"/>
+    </rule>
+    <rule e="any" k="tyyppi" v="teollinenrakennus|teollinenrakennus_p" zoom-min="14">
+        <circle radius="1" scale-radius="true" fill="#999999"/>
+    </rule>
+    <rule e="any" k="tyyppi" v="kirkollinenrakennus|kirkollinenrakennus_p" zoom-min="14">
+        <circle radius="1" scale-radius="true" fill="#ff33ff"/>
+    </rule>
+
+    <rule e="way" k="tyyppi" v="tieviiva">
+        <pathText k="name" font-style="bold" font-size="12" fill="#000000" stroke="#FFFFFF" stroke-width="4"
+                  display="always" priority="2" repeat-gap="500"/>
+        <pathText k="ref" font-style="bold" font-size="12" fill="#000000" stroke="#FFFFFF" stroke-width="4"
+                  repeat-gap="1000" display="always" priority="1" repeat-start="50"/>
+    </rule>
+
+    <rule e="any" k="kohdeluokka" v="32101" zoom-min="16"> <caption priority="10" k="name" font-style="bold" font-size="12" fill="#000000" stroke="#FFFFFF"
+                 stroke-width="2"/>
+    </rule>
+    <rule e="any" k="kohdeluokka" v="32201" zoom-min="16"> <caption priority="10" k="name" font-style="bold" font-size="12" fill="#000000" stroke="#FFFFFF"
+                 stroke-width="2"/>
+    </rule>
+    <rule e="any" k="kohdeluokka" v="32301" zoom-min="16">
+        <caption priority="10" k="name" font-style="bold" font-size="12" fill="#000000" stroke="#FFFFFF"
+                 stroke-width="2"/>
+    </rule>
+    <rule e="any" k="kohdeluokka" v="32401" zoom-min="16">
+        <caption priority="10" k="name" font-style="bold" font-size="12" fill="#000000" stroke="#FFFFFF"
+                 stroke-width="2"/>
+    </rule>
+    <rule e="any" k="kohdeluokka" v="32501" zoom-min="16">
+        <caption priority="10" k="name" font-style="bold" font-size="12" fill="#000000" stroke="#FFFFFF"
+                 stroke-width="2"/>
+    </rule>
+    <rule e="any" k="kohdeluokka" v="32901" zoom-min="16">
+        <caption priority="10" k="name" font-style="bold" font-size="12" fill="#000000" stroke="#FFFFFF"
+                 stroke-width="2"/>
+    </rule>
+    <rule e="any" k="kohdeluokka" v="33001" zoom-min="16">
+        <caption priority="10" k="name" font-style="bold" font-size="12" fill="#000000" stroke="#FFFFFF"
+                 stroke-width="2"/>
+    </rule>
+    <rule e="any" k="kohdeluokka" v="33101" zoom-min="16">
+        <caption priority="10" k="name" font-style="bold" font-size="12" fill="#000000" stroke="#FFFFFF"
+                 stroke-width="2"/>
+    </rule>
+    <rule e="any" k="kohdeluokka" v="34601" zoom-min="16">
+        <caption priority="10" k="name" font-style="bold" font-size="12" fill="#000000" stroke="#FFFFFF"
+                 stroke-width="2"/>
+    </rule>
+    <rule e="any" k="kohdeluokka" v="34901" zoom-min="16">
+        <caption priority="10" k="name" font-style="bold" font-size="12" fill="#000000" stroke="#FFFFFF"
+                 stroke-width="2"/>
+    </rule>
+    <rule e="any" k="kohdeluokka" v="35010" zoom-min="16">
+        <caption priority="10" k="name" font-style="bold" font-size="12" fill="#000000" stroke="#FFFFFF"
+                 stroke-width="2"/>
+    </rule>
+    <rule e="any" k="kohdeluokka" v="35020" zoom-min="15">
+        <caption priority="10" k="name" font-style="bold" font-size="12" fill="#000000" stroke="#FFFFFF"
+                 stroke-width="2"/>
+    </rule>
+    <rule e="any" k="kohdeluokka" v="35030" zoom-min="15">
+        <caption priority="10" k="name" font-style="bold" font-size="12" fill="#000000" stroke="#FFFFFF"
+                 stroke-width="2"/>
+    </rule>
+    <rule e="any" k="kohdeluokka" v="35040" zoom-min="14">
+        <caption priority="50" k="name" font-style="bold" font-size="14" fill="#000000" stroke="#FFFFFF"
+                 stroke-width="2" display="always"/>
+    </rule>
+    <rule e="any" k="kohdeluokka" v="35050" zoom-min="16">
+        <caption priority="10" k="name" font-style="bold" font-size="12" fill="#000000" stroke="#FFFFFF"
+                 stroke-width="2"/>
+    </rule>
+    <rule e="any" k="kohdeluokka" v="35060" zoom-min="16">
+        <caption priority="10" k="name" font-style="bold" font-size="12" fill="#000000" stroke="#FFFFFF"
+                 stroke-width="2"/>
+    </rule>
+    <rule e="any" k="kohdeluokka" v="35070" zoom-min="14">
+        <caption priority="10" k="name" font-style="bold" font-size="14" fill="#000000" stroke="#FFFFFF"
+                 stroke-width="2"/>
+    </rule>
+    <rule e="any" k="kohdeluokka" v="35080" zoom-min="16">
+        <caption priority="10" k="name" font-style="bold" font-size="12" fill="#000000" stroke="#FFFFFF"
+                 stroke-width="2"/>
+    </rule>
+    <rule e="any" k="kohdeluokka" v="35090" zoom-min="16">
+        <caption priority="10" k="name" font-style="bold" font-size="12" fill="#000000" stroke="#FFFFFF"
+                 stroke-width="2"/>
+    </rule>
+    <rule e="any" k="kohdeluokka" v="35101" zoom-min="16">
+        <caption priority="10" k="name" font-style="bold" font-size="12" fill="#000000" stroke="#FFFFFF"
+                 stroke-width="2"/>
+    </rule>
+    <rule e="any" k="kohdeluokka" v="36101" zoom-min="16">
+        <caption priority="10" k="name" font-style="bold" font-size="12" fill="#000000" stroke="#FFFFFF"
+                 stroke-width="2"/>
+    </rule>
+    <rule e="any" k="kohdeluokka" v="12101" zoom-min="14">
+        <caption priority="10" k="name" font-style="bold" font-size="12" fill="#000000" stroke="#FFFFFF"
+                 stroke-width="2"/>
+    </rule>
+    <rule e="any" k="kohdeluokka" v="12301" zoom-min="14">
+        <caption priority="10" k="name" font-style="bold" font-size="12" fill="#000000" stroke="#FFFFFF"
+                 stroke-width="2"/>
+    </rule>
+    <rule e="any" k="kohdeluokka" v="14201" zoom-min="14">
+        <caption priority="10" k="name" font-style="bold" font-size="12" fill="#000000" stroke="#FFFFFF"
+                 stroke-width="2"/>
+    </rule>
+    <rule e="any" k="kohdeluokka" v="16101" zoom-min="14">
+        <caption priority="10" k="name" font-style="bold" font-size="12" fill="#000000" stroke="#FFFFFF"
+                 stroke-width="2"/>
+    </rule>
+    <rule e="any" k="kohdeluokka" v="42101" zoom-min="14">
+        <caption priority="10" k="name" font-style="bold" font-size="12" fill="#000000" stroke="#FFFFFF"
+                 stroke-width="2"/>
+    </rule>
+    <rule e="any" k="kohdeluokka" v="42201" zoom-min="14">
+        <caption priority="10" k="name" font-style="bold" font-size="12" fill="#000000" stroke="#FFFFFF"
+                 stroke-width="2"/>
+    </rule>
+    <rule e="any" k="kohdeluokka" v="36201" zoom-min="14"> <caption priority="10" k="name" font-style="bold" font-size="12" fill="#0A73C9" stroke="#FFFFFF"
+                 stroke-width="2"/>
+    </rule>
+    <rule e="any" k="kohdeluokka" v="36301" zoom-min="14"> <caption priority="10" k="name" font-style="bold" font-size="12" fill="#0A73C9" stroke="#FFFFFF"
+                 stroke-width="2"/>
+    </rule>
+    <rule e="any" k="kohdeluokka" v="36410" zoom-min="14">
+        <caption priority="10" k="name" font-style="bold" font-size="12" fill="#0A73C9" stroke="#FFFFFF"
+                 stroke-width="2"/>
+    </rule>
+    <rule e="any" k="kohdeluokka" v="36420" zoom-min="14">
+        <caption priority="10" k="name" font-style="bold" font-size="12" fill="#0A73C9" stroke="#FFFFFF"
+                 stroke-width="2"/>
+    </rule>
+    <rule e="any" k="kohdeluokka" v="36490" zoom-min="14">
+        <caption priority="10" k="name" font-style="bold" font-size="12" fill="#0A73C9" stroke="#FFFFFF"
+                 stroke-width="2"/>
+    </rule>
+    <rule e="any" k="kohdeluokka" v="38201" zoom-min="14">
+        <caption priority="10" k="name" font-style="bold" font-size="12" fill="#0A73C9" stroke="#FFFFFF"
+                 stroke-width="2"/>
+    </rule>
+    <rule e="any" k="kohdeluokka" v="38501" zoom-min="14">
+        <caption priority="10" k="name" font-style="bold" font-size="12" fill="#000000" stroke="#FFFFFF"
+                 stroke-width="2"/>
+    </rule>
+    <rule e="any" k="kohdeluokka" v="38901" zoom-min="14">
+        <caption priority="10" k="name" font-style="bold" font-size="12" fill="#000000" stroke="#FFFFFF"
+                 stroke-width="2"/>
+    </rule>
+    <rule e="any" k="kohdeluokka" v="44901" zoom-min="14">
+        <caption priority="10" k="name" font-style="bold" font-size="12" fill="#000000" stroke="#FFFFFF"
+                 stroke-width="2"/>
+    </rule>
+    <rule e="any" k="kohdeluokka" v="48111">
+        <caption display="always" priority="500" k="name" font-style="bold" font-size="17" fill="#000000"
+                 stroke="#FFFFFF" stroke-width="3"/>
+    </rule>
+
+    <rule e="any" k="kohdeluokka" v="48112">
+        <caption display="always" priority="400" k="name" font-size="17" fill="#000000" stroke="#FFFFFF"
+                 stroke-width="5"/>
+    </rule>
+
+    <rule e="any" k="kohdeluokka" v="48120" zoom-min="10">
+        <caption priority="100" k="name" font-style="bold" font-size="13" fill="#000000" stroke="#FFFFFF"
+                 stroke-width="5"/>
+    </rule>
+    <rule e="any" k="kohdeluokka" v="48130" zoom-min="16">
+        <caption priority="50" k="name" font-size="12" fill="#000000" stroke="#FFFFFF" stroke-width="2"/>
+    </rule>
+    <rule e="any" k="kohdeluokka" v="48190" zoom-min="17">
+        <caption priority="40" k="name" font-size="12" fill="#000000" stroke="#FFFFFF" stroke-width="4"/>
+    </rule>
+    <rule e="any" k="kohdeluokka" v="72303" zoom-min="14">
+        <caption priority="10" k="name" font-style="bold" font-size="12" fill="#000000" stroke="#FFFFFF"
+                 stroke-width="2"/>
+    </rule>
+    <rule e="any" k="kohdeluokka" v="72403" zoom-min="14">
+        <caption priority="10" k="name" font-style="bold" font-size="12" fill="#000000" stroke="#FFFFFF"
+                 stroke-width="2"/>
+    </rule>
+
+
+    <rule e="way" k="tyyppi" v="jarvi|meri|virtavesialue">
+        <area fill="#80ffff" stroke="#80ffff" stroke-width="0.0"/>
+    </rule>
+
+    <rule e="any" k="kohdeluokka" v="39110" zoom-min="14">
+        <area src="file:/mml/avometsa2.svg" fill="#ff0000" symbol-width="5" symbol-height="5"/>
+    </rule>
+
+    <rule e="any" k="kohdeluokka" v="39120" zoom-min="12">
+        <area src="file:/mml/varvikko.png" symbol-width="5" symbol-height="5"/>
+    </rule>
+
+
+    <rule e="any" k="tyyppi" v="kivikko|vesikivikko" zoom-min="14">
+        <area src="file:/mml/Pkivikko_0_0_0_100.svg" symbol-width="200" symbol-height="200"/>
+    </rule>
+
+
+    <rule e="way" k="tyyppi" v="hautausmaa" zoom-min="12">
+        <area fill="#80ff80" stroke="#000000" stroke-width="0.2"/>
+    </rule>
+
+    <rule e="way" k="tyyppi" v="puisto" zoom-min="13">
+        <area fill="#b3ff66" stroke="#b3ff66" stroke-width="0.1"/>
+    </rule>
+
+
+    <rule e="way" k="kohdeluokka" v="32611" zoom-min="12">
+        <area fill="#ffd980" stroke="#000000" stroke-width="0.2"/>
+    </rule>
+
+    <rule e="way" k="kohdeluokka" v="32612" zoom-min="13">
+        <area fill="#ffd980" stroke="#000000" stroke-width="0.2"/>
+    </rule>
+
+    <rule e="way" k="tyyppi" v="urheilujavirkistysalue" zoom-min="12">
+        <area fill="#e6ff80" stroke="#000000" stroke-width="0.2"/>
+    </rule>
+
+    <rule e="way" k="tyyppi" v="kallioalue" zoom-min="14">
+        <area fill="#D1C7D1" stroke="#D1C7D1" stroke-width="0.2"/>
+    </rule>
+
+    <rule e="node" k="kohdeluokka" v="34100" zoom-min="14">
+        <circle radius="2" scale-radius="true" fill="#D1C7D1"/>
+    </rule>
+
+
+    <rule e="way" k="tyyppi" v="niitty" zoom-min="12">
+        <area fill="#fff266" stroke="#fff266" stroke-width="0.2"/>
+    </rule>
+
+
+    <rule e="way" k="kohdeluokka" v="32111" zoom-min="12">
+        <area fill="#ffffd9" stroke="#000000" stroke-width="0.2"/>
+    </rule>
+
+    <rule e="way" k="kohdeluokka" v="32112" zoom-min="12">
+        <area fill="#e6cc80" stroke="#000000" stroke-width="0.2"/>
+    </rule>
+
+    <rule e="way" k="kohdeluokka" v="32113" zoom-min="12">
+        <area fill="#cfb873" stroke="#000000" stroke-width="0.2"/>
+    </rule>
+
+
+    <rule e="way" k="tyyppi" v="kaatopaikka" zoom-min="12">
+        <area fill="#ffffd9" stroke="#000000" stroke-width="0.2"/>
+    </rule>
+
+    <rule e="way" k="tyyppi" v="louhos" zoom-min="12">
+        <area src="file:/mml/Pkivikko_0_0_0_60.svg" fill="#ffffd9" stroke="#000000" stroke-width="0.2"
+              symbol-width="150" symbol-height="150"/>
+    </rule>
+
+    <rule e="way" k="tyyppi" v="hietikko" zoom-min="12">
+        <area fill="#ffff66" stroke="#000000" stroke-width="0.2"/>
+    </rule>
+
+
+    <rule e="way" k="tyyppi" v="varastoalue" zoom-min="12">
+        <area fill="#f3f3e6" stroke="#000000" stroke-width="0.2"/>
+    </rule>
+
+    <rule e="way" k="tyyppi" v="soistuma" zoom-min="12">
+        <area fill="#e6f5f5" stroke="#e6f5f5" stroke-width="0.5"/>
+    </rule>
+
+    <rule e="way" k="kohdeluokka" v="35411" zoom-min="12">
+        <area fill="#d1cc40" stroke="#d1cc40" stroke-width="0.5"/>
+    </rule>
+
+
+    <rule e="way" k="kohdeluokka" v="35412" zoom-min="12">
+        <area fill="#c7ebeb" stroke="#c7ebeb" stroke-width="0.5"/>
+    </rule>
+
+    <rule e="way" k="kohdeluokka" v="35421" zoom-min="12">
+        <area fill="#d1cc40" stroke="#d1cc40" stroke-width="0.5"/>
+        <area src="file:/mml/suo_vaikea.svg" symbol-width="20" symbol-height="6"/>
+    </rule>
+
+
+    <rule e="way" k="kohdeluokka" v="35422" zoom-min="12">
+        <area fill="#C7EBEB" stroke="#C7EBEB" stroke-width="0.5"/>
+        <area src="file:/mml/suo_vaikea.svg" symbol-width="20" symbol-height="6"/>
+    </rule>
+
+
+    <rule e="way" k="tyyppi" v="allas" zoom-min="12">
+        <area fill="#80ffff" stroke="#80ffff" stroke-width="0.2"/>
+    </rule>
+
+    <rule e="way" k="kohdeluokka" v="39130" zoom-min="12">
+        <area fill="#ffff40" stroke="#ffff40" stroke-width="0.2"/>
+    </rule>
+
+    <rule e="way" k="kohdeluokka" v="38400" zoom-min="12">
+        <area src="file:/mml/Phko_100_50_0_0.svg" symbol-width="400" symbol-height="400"/>
+    </rule>
+
+    <rule e="way" k="kohdeluokka" v="38300" zoom-min="12">
+        <area fill="#b3ffff" stroke="#b3ffff" stroke-width="0.2"/>
+    </rule>
+
+    <rule e="way" k="tyyppi" v="autoliikennealue" zoom-min="12">
+        <area fill="#ffb280" stroke="#000000" stroke-width="0.2"/>
+    </rule>
+
+
+    <rule e="way" k="kohdeluokka" v="32411">
+        <area fill="#f26161" stroke="#000000" stroke-width="0.2"/>
+    </rule>
+
+
+    <rule e="way" k="kohdeluokka" v="32412">
+        <area fill="#ff7f66" stroke="#000000" stroke-width="0.2"/>
+    </rule>
+
+
+    <rule e="way" k="kohdeluokka" v="32413">
+        <area fill="#ffff8c" stroke="#000000" stroke-width="0.2"/>
+    </rule>
+
+
+    <rule e="way" k="kohdeluokka" v="32415">
+        <area fill="#ffff8c" stroke="#000000" stroke-width="0.2"/>
+    </rule>
+
+
+    <rule e="way" k="kohdeluokka" v="32416">
+        <area fill="#ffff8c" stroke="#000000" stroke-width="0.2"/>
+    </rule>
+
+
+    <rule e="way" k="kohdeluokka" v="32414">
+        <area fill="#ffe680" stroke="#000000" stroke-width="0.2"/>
+    </rule>
+
+
+    <rule e="way" k="kohdeluokka" v="32417">
+        <area fill="#ffe680" stroke="#000000" stroke-width="0.2"/>
+    </rule>
+
+
+    <rule e="way" k="kohdeluokka" v="32418">
+        <area fill="#ffe680" stroke="#000000" stroke-width="0.2"/>
+    </rule>
+
+
+    <rule e="way" k="tyyppi" v="korkeuskayra" zoom-min="14">
+        <line stroke="#ab5700" stroke-width="0.2" stroke-linecap="square"/>
+    </rule>
+
+    <rule e="way" k="tyyppi" v="syvyyskayra|syvyyskayra_v" zoom-min="14">
+        <line stroke="#0080ff" stroke-width="0.2" stroke-linecap="square"/>
+    </rule>
+
+    <rule e="any" k="tyyppi" v="syvyyspiste|syvyyspiste_p" zoom-min="14">
+        <caption priority="10" k="ele" font-style="bold" font-size="11" fill="#0080ff" stroke="#FFFFFF"
+                 stroke-width="1"/>
+        <caption priority="10" k="name" font-style="bold" font-size="11" fill="#0080ff" stroke="#FFFFFF"
+                 stroke-width="1"/>
+    </rule>
+
+    <rule e="way" k="tyyppi" v="taytemaa" zoom-min="12">
+        <line stroke="#ffffd9" stroke-width="0.2" stroke-linecap="square"/>
+    </rule>
+
+    <rule e="way" k="highway" v="path|footway|trail" zoom-min="13">
+        <line stroke="#0000ff" stroke-width="0.5" stroke-dasharray="6,2" stroke-linecap="butt"/>
+    </rule>
+    <rule e="way" k="kohdeluokka" v="12313" zoom-min="13">
+        <line stroke="#000000" stroke-width="0.5" stroke-dasharray="6,2" stroke-linecap="butt"/>
+        <rule e="way" k="paallyste" v="2">
+            <line stroke="#000000" stroke-width="2.5" stroke-dasharray="2,20" stroke-linecap="butt"/>
+        </rule>
+    </rule>
+
+
+    <rule e="way" k="tyyppi" v="luontopolut" zoom-min="13">
+        <line stroke="#ff0000" stroke-width="0.4" stroke-dasharray="4,2" stroke-linecap="butt"/>
+    </rule>
+
+    <rule e="way" k="tyyppi" v="ulkoilureititline" zoom-min="13">
+        <line stroke="#ff0000" stroke-width="0.4" stroke-dasharray="4,2" stroke-linecap="butt"/>
+    </rule>
+
+    <rule e="way" k="tyyppi" v="kesaretkeilyreititline" zoom-min="13">
+        <line stroke="#ff0000" stroke-width="0.4" stroke-dasharray="4,2" stroke-linecap="butt"/>
+    </rule>
+
+
+    <rule e="way" k="kohdeluokka" v="12314" zoom-min="13">
+        <line stroke="#000000" stroke-width="0.4" stroke-dasharray="24,4" stroke-linecap="butt"/>
+    </rule>
+
+    <rule e="way" k="highway" v="track" zoom-min="12">
+        <line stroke="#0000ff" stroke-width="0.6" stroke-dasharray="14,5" stroke-linecap="butt"/>
+    </rule>
+    <rule e="way" k="kohdeluokka" v="12316" zoom-min="12">
+        <line stroke="#000000" stroke-width="0.6" stroke-dasharray="14,5" stroke-linecap="butt"/>
+    </rule>
+
+    <rule e="way" k="tunnel" v="~">
+        <rule e="way" k="bridge" v="~">
+            <rule e="way" k="kohdeluokka" v="12111">
+                <line stroke="#000000" stroke-width="4" stroke-linecap="butt"/>
+                <line stroke="#40C000" stroke-width="3.5" stroke-linecap="butt"/>
+                <rule e="way" k="valmiusaste" v="1|2|3">
+                    <line stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="butt" stroke-dasharray="20,20"/>
+                </rule>
+            </rule>
+
+            <rule e="way" k="kohdeluokka" v="12112">
+                <line stroke="#000000" stroke-width="2.5" stroke-linecap="butt"/>
+                <line stroke="#FFCC00" stroke-width="2" stroke-linecap="butt"/>
+                <rule e="way" k="valmiusaste" v="1|2|3">
+                    <line stroke="#FFFFFF" stroke-width="2" stroke-linecap="butt" stroke-dasharray="20,20"/>
+                </rule>
+            </rule>
+
+            <rule e="way" k="kohdeluokka" v="12121">
+                <line stroke="#000000" stroke-width="2.5" stroke-linecap="butt"/>
+                <rule e="way" k="paallyste" v="2">
+                    <line stroke="#C00000" stroke-width="1.25" stroke-linecap="butt"/>
+                </rule>
+                <rule e="way" k="paallyste" v="0|1">
+                    <line stroke="#BF9D00" stroke-width="1.25" stroke-linecap="butt"/>
+                </rule>
+                <rule e="way" k="valmiusaste" v="1|2|3">
+                    <line stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" stroke-dasharray="15,20"/>
+                </rule>
+            </rule>
+
+            <rule e="way" k="kohdeluokka" v="12122">
+                <line stroke="#000000" stroke-width="2.5" stroke-linecap="butt"/>
+                <rule e="way" k="paallyste" v="2">
+                    <line stroke="#C00000" stroke-width="1.25" stroke-linecap="butt"/>
+                </rule>
+                <rule e="way" k="paallyste" v="0|1">
+                    <line stroke="#BF9D00" stroke-width="1.25" stroke-linecap="butt"/>
+                </rule>
+                <rule e="way" k="valmiusaste" v="1|2|3">
+                    <line stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" stroke-dasharray="20,20"/>
+                </rule>
+            </rule>
+
+            <rule e="way" k="kohdeluokka" v="12131" zoom-min="8">
+                <line stroke="#000000" stroke-width="2.5" stroke-linecap="butt"/>
+                <rule e="way" k="paallyste" v="2">
+                    <line stroke="#C00000" stroke-width="1.8" stroke-linecap="butt"/>
+                </rule>
+                <rule e="way" k="paallyste" v="0|1">
+                    <line stroke="#BF9D00" stroke-width="1.8" stroke-linecap="butt"/>
+                </rule>
+                <rule e="way" k="valmiusaste" v="1|2|3">
+                    <line stroke="#FFFFFF" stroke-width="1.25" stroke-linecap="square" stroke-dasharray="20,20"/>
+                </rule>
+            </rule>
+
+            <rule e="way" k="kohdeluokka" v="12132" zoom-min="8">
+                <line stroke="#000000" stroke-width="2" stroke-linecap="butt"/>
+                <rule e="way" k="paallyste" v="2">
+                    <line stroke="#C00000" stroke-width="1.8" stroke-linecap="butt"/>
+                </rule>
+                <rule e="way" k="paallyste" v="0|1">
+                    <line stroke="#BF9D00" stroke-width="1.8" stroke-linecap="butt"/>
+                </rule>
+                <rule e="way" k="valmiusaste" v="1|2|3">
+                    <line stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="butt" stroke-dasharray="20,20"/>
+                </rule>
+            </rule>
+        </rule>
+        <rule e="way" k="tyyppi" v="rautatie">
+            <line stroke="#000000" stroke-width="1" stroke-linecap="butt"/>
+        </rule>
+
+        <rule e="way" k="kohdeluokka" v="14111">
+            <line stroke="#99ffff" stroke-width="0.5" stroke-dasharray="15,15" stroke-linecap="butt"/>
+        </rule>
+
+        <rule e="way" k="kohdeluokka" v="14112|14131|14121">
+            <line stroke="#ffffff" stroke-width="0.5" stroke-dasharray="15,15" stroke-linecap="butt"/>
+        </rule>
+
+    </rule>
+    <rule e="way" k="tunnel" v="yes">
+
+        <rule e="way" k="kohdeluokka" v="12111">
+            <line stroke="#6c6c6c" stroke-width="3" stroke-linecap="butt" stroke-dasharray="15,15"/>
+        </rule>
+
+        <rule e="way" k="kohdeluokka" v="12112">
+            <line stroke="#6c6c6c" stroke-width="2.5" stroke-linecap="butt" stroke-dasharray="15,15"/>
+        </rule>
+
+        <rule e="way" k="kohdeluokka" v="12121">
+            <line stroke="#6c6c6c" stroke-width="2.5" stroke-linecap="butt" stroke-dasharray="15,15"/>
+        </rule>
+
+        <rule e="way" k="kohdeluokka" v="12122">
+            <line stroke="#6c6c6c" stroke-width="2.5" stroke-linecap="butt" stroke-dasharray="15,15"/>
+        </rule>
+
+        <rule e="way" k="kohdeluokka" v="12131">
+            <line stroke="#6c6c6c" stroke-width="2.75" stroke-linecap="butt" stroke-dasharray="15,15"/>
+        </rule>
+
+        <rule e="way" k="kohdeluokka" v="12132">
+            <line stroke="#6c6c6c" stroke-width="1.75" stroke-linecap="butt" stroke-dasharray="15,15"/>
+        </rule>
+
+        <rule e="way" k="tyyppi" v="rautatie">
+            <line stroke="#6c6c6c" stroke-width="1" stroke-linecap="butt" stroke-dasharray="15,15"/>
+        </rule>
+    </rule>
+
+    <rule e="way" k="bridge" v="yes">
+        <rule e="way" k="kohdeluokka" v="12111">
+            <line stroke="#000000" stroke-width="3" stroke-linecap="butt"/>
+            <line stroke="#2D8700" stroke-width="2.5" stroke-linecap="butt"/>
+            <rule e="way" k="valmiusaste" v="1|2|3">
+                <line stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="butt" stroke-dasharray="20,20"/>
+            </rule>
+        </rule>
+
+        <rule e="way" k="kohdeluokka" v="12112">
+            <line stroke="#000000" stroke-width="2.5" stroke-linecap="butt"/>
+            <line stroke="#C9A100" stroke-width="2" stroke-linecap="butt"/>
+            <rule e="way" k="valmiusaste" v="1|2|3">
+                <line stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" stroke-dasharray="20,20"/>
+            </rule>
+        </rule>
+
+        <rule e="way" k="kohdeluokka" v="12121">
+            <line stroke="#000000" stroke-width="2.5" stroke-linecap="butt"/>
+            <line stroke="#8C0000" stroke-width="2" stroke-linecap="butt"/>
+            <rule e="way" k="valmiusaste" v="1|2|3">
+                <line stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" stroke-dasharray="20,20"/>
+            </rule>
+        </rule>
+
+        <rule e="way" k="kohdeluokka" v="12122">
+            <line stroke="#000000" stroke-width="2.5" stroke-linecap="butt"/>
+            <line stroke="#8C0000" stroke-width="2" stroke-linecap="butt"/>
+            <rule e="way" k="valmiusaste" v="1|2|3">
+                <line stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" stroke-dasharray="20,20"/>
+            </rule>
+        </rule>
+
+        <rule e="way" k="kohdeluokka" v="12131" zoom-min="8">
+            <line stroke="#000000" stroke-width="2.5" stroke-linecap="butt"/>
+            <line stroke="#8C0000" stroke-width="1.6" stroke-linecap="butt"/>
+            <rule e="way" k="valmiusaste" v="1|2|3">
+                <line stroke="#FFFFFF" stroke-width="1.25" stroke-linecap="square" stroke-dasharray="20,20"/>
+            </rule>
+        </rule>
+
+        <rule e="way" k="kohdeluokka" v="12132" zoom-min="8">
+            <line stroke="#000000" stroke-width="2.0" stroke-linecap="butt"/>
+            <rule e="way" k="paallyste" v="~">
+                <line stroke="#8C0000" stroke-width="1.8" stroke-linecap="butt"/>
+            </rule>
+            <rule e="way" k="paallyste" v="0|1">
+                <line stroke="#7B6500" stroke-width="1.8" stroke-linecap="butt"/>
+            </rule>
+            <rule e="way" k="valmiusaste" v="1|2|3">
+                <line stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="square" stroke-dasharray="20,20"/>
+            </rule>
+        </rule>
+    </rule>
+
+    <rule e="way" k="kohdeluokka" v="12141" zoom-min="9">
+        <line stroke="#000000" stroke-width="1.5" stroke-linecap="butt"/>
+    </rule>
+
+    <rule e="way" k="kohdeluokka" v="12200" zoom-min="12">
+        <line stroke="#ab5700" stroke-width="0.5" stroke-linecap="butt"/>
+    </rule>
+
+    <rule e="way" k="kohdeluokka" v="12312" zoom-min="12">
+        <line stroke="#000000" stroke-width="0.5" stroke-dasharray="16,4" stroke-linecap="butt"/>
+    </rule>
+
+    <rule e="way" k="kohdeluokka" v="12151" zoom-min="12">
+        <line stroke="#cc4d00" stroke-width="0.5" stroke-dasharray="35,30" stroke-linecap="butt"/>
+    </rule>
+
+    <rule e="way" k="kohdeluokka" v="12152" zoom-min="12">
+        <line stroke="#cc4d00" stroke-width="0.5" stroke-dasharray="35,30" stroke-linecap="butt"/>
+    </rule>
+
+    <rule e="way" k="kohdeluokka" v="16511">
+        <line stroke="#1b3560" stroke-width="0.4"/>
+    </rule>
+
+    <rule e="way" k="kohdeluokka" v="16512">
+        <line stroke="#1b3560" stroke-width="0.4" stroke-dasharray="5,10" stroke-linecap="butt"/>
+    </rule>
+
+    <rule e="way" k="kohdeluokka" v="16521">
+        <line stroke="#1b3560" stroke-width="0.4" stroke-dasharray="5,10" stroke-linecap="butt"/>
+    </rule>
+
+    <rule e="way" k="kohdeluokka" v="16522">
+        <line stroke="#1b3560" stroke-width="0.2" stroke-dasharray="4,30" stroke-linecap="butt"/>
+    </rule>
+
+    <rule e="way" k="kohdeluokka" v="45111">
+        <line stroke="#000000" stroke-width="0.5" stroke-linecap="butt"/>
+    </rule>
+
+    <rule e="way" k="kohdeluokka" v="45112">
+        <line stroke="#000000" stroke-width="0.8" stroke-linecap="butt"/>
+    </rule>
+
+    <rule e="way" k="kohdeluokka" v="36311" zoom-min="15">
+        <line stroke="#118AED" stroke-width="0.3" stroke-linecap="square"/>
+    </rule>
+
+    <rule e="way" k="kohdeluokka" v="84112|84113|84114|84115"> <line stroke="#4d00ff" stroke-width="1" stroke-dasharray="20,8,3,8" stroke-linecap="round"/>
+    </rule>
+
+    <rule cat="parcels" e="way" k="tyyppi" v="kiinteistoraja">
+        <line stroke="#ff0000" stroke-width="0.3" stroke-linecap="butt"/>
+    </rule>
+
+    <rule e="way" k="tyyppi" v="sahkolinja" zoom-min="13">
+        <line stroke="#000000" stroke-width="0.2" stroke-linecap="round"/>
+    </rule>
+
+
+    <rule e="any" k="kohdeluokka" v="30200">
+        <line stroke="#000000" stroke-width="0.3" stroke-linecap="round"/>
+    </rule>
+
+    <rule e="any" k="kohdeluokka" v="22100">
+        <line stroke="#000000" stroke-width="0.3" stroke-linecap="round"/>
+    </rule>
+
+    <rule e="any" k="kohdeluokka" v="30400">
+        <line stroke="#000000" stroke-width="0.3" stroke-linecap="round"/>
+    </rule>
+
+    <rule e="any" k="kohdeluokka" v="34500">
+        <line stroke="#000000" stroke-width="0.3" stroke-linecap="round"/>
+    </rule>
+
+    <rule e="any" k="kohdeluokka" v="44500" zoom-min="12">
+        <line stroke="#000000" stroke-width="0.3" stroke-linecap="round"/>
+    </rule>
+
+    <rule e="any" k="kohdeluokka" v="45700">
+        <line stroke="#000000" stroke-width="0.5" stroke-linecap="round"/>
+    </rule>
+
+
+    <rule e="any" k="kohdeluokka" v="74330|72440|72420|72410">
+        <line stroke="#00b300" stroke-width="0.2" stroke-linecap="round"/>
+    </rule>
+
+
+    <rule e="way" k="tyyppi" v="kiinteistoraja_v">
+        <line stroke="#000000" stroke-width="0.3" stroke-linecap="round"/>
+    </rule>
+
+</rendertheme>
